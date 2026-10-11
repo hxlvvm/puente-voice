@@ -1,0 +1,4 @@
+name: happy-en
+lang: en
+caller: ["Hello, I need an appointment", "My name is John Smith", "July 4th, 1975", "yes", "a checkup", "the second one", "yes"]
+expect: {state: done, booked_slot: s2, says_contains: ["booked for Tuesday, October 13 at 12:30 PM"]}

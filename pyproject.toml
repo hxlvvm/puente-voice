@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puente-voice"
+version = "0.1.0"
+description = "Open-source Spanish/English phone agent for clinic appointment scheduling over FHIR."
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = ["pydantic>=2.11,<3", "httpx>=0.28,<0.29", "pyyaml>=6.0,<7", "tzdata>=2024.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9"]
+audio = ["pipecat-ai[websocket,whisper,kokoro,silero]==1.12.0", "uvicorn>=0.32,<1", "websockets>=13,<18"]
+
+[tool.setuptools.packages.find]
+include = ["puente_voice*"]
+
+[tool.pytest.ini_options]
+markers = ["fhir: integration tests that need a running FHIR server (set PUENTE_FHIR_URL)"]
+addopts = "-m 'not fhir'"
+filterwarnings = ["error::DeprecationWarning:puente_voice"]  # the constraint: no deprecated Pipecat API

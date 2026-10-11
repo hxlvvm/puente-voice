@@ -1,0 +1,3 @@
+name: new-patient
+caller: ["Hola, quiero una cita", "Me llamo Pedro Ramírez", "2 de mayo de 1985", "sí", "Pedro Ramírez", "sí", "312 555 0199"]
+expect: {state: transferred, transfer_reason: new_patient, says_contains: ["¿Es usted paciente nuevo?"]}

@@ -1,0 +1,36 @@
+# DEMO ONLY, NOT FOR PRODUCTION: synthetic clinic and patients, no TLS/SRTP, scripts without clinician review.
+# See docs/deployment.md. Start: cp .env.example .env (fill it in), scripts/fetch_models.sh, docker compose up --build
+services:
+  puente:
+    build: .
+    environment:
+      PUENTE_MODELS: /models
+      PUENTE_DEVICE: cpu
+      PUENTE_SAFETY_MODEL: ${PUENTE_SAFETY_MODEL:-}
+      HF_HOME: /models/hf   # Whisper downloads here on first start
+    volumes:
+      - ./models:/models
+    expose: ["8080", "9092"]   # reachable by Asterisk only; nothing of the agent is published
+
+  asterisk:
+    # Asterisk is GPLv2 and runs as its own container; this repository ships configuration files only
+    image: andrius/asterisk:22.11.0_debian-trixie-537e52c@sha256:27b811fe5a7271d83f0326efba33251f8770280d30eab576698ee87f877fc8c9
+    depends_on: [puente]
+    environment:
+      PUENTE_SIP_PASSWORD: ${PUENTE_SIP_PASSWORD:?set PUENTE_SIP_PASSWORD in .env}
+      PUENTE_PUBLIC_IP: ${PUENTE_PUBLIC_IP:?set PUENTE_PUBLIC_IP in .env}
+      PUENTE_AGENT: puente:9092
+      PUENTE_AGENT_HTTP: puente:8080
+    volumes:
+      - ./deploy/asterisk/pjsip.conf.in:/etc/asterisk/pjsip.conf.in:ro
+      - ./deploy/asterisk/extensions.conf:/etc/asterisk/extensions.conf:ro
+      - ./deploy/asterisk/rtp.conf:/etc/asterisk/rtp.conf:ro
+    entrypoint:
+      - /bin/sh
+      - -c
+      - >-
+        sed -e "s/@SIP_PASSWORD@/$$PUENTE_SIP_PASSWORD/" -e "s/@PUBLIC_IP@/$$PUENTE_PUBLIC_IP/"
+        /etc/asterisk/pjsip.conf.in > /etc/asterisk/pjsip.conf && exec asterisk -f
+    ports:
+      - "5060:5060/udp"
+      - "10000-10099:10000-10099/udp"

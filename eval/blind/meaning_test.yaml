@@ -1,0 +1,115 @@
+# name
+- {kind: name, lang: es, split: test, text: "Buenos días, mi nombre es Luz Marina Gutiérrez.", expected: "Luz Marina Gutiérrez"}
+- {kind: name, lang: es, split: test, text: "Eh, pues soy Pedro Antonio Villanueva Soto.", expected: "Pedro Antonio Villanueva Soto"}
+- {kind: name, lang: es, split: test, text: "Sí, mire, Dolores Esperanza Cabrera.", expected: "Dolores Esperanza Cabrera"}
+- {kind: name, lang: es, split: test, text: "Ay, Jesús Alberto Quintanilla, mucho gusto.", expected: "Jesús Alberto Quintanilla"}
+- {kind: name, lang: es, split: test, text: "O sea, me llamo Brenda Nicole Aguilar.", expected: "Brenda Nicole Aguilar"}
+- {kind: name, lang: es, split: test, text: "Este... Ramón Octavio Zepeda.", expected: "Ramón Octavio Zepeda"}
+- {kind: name, lang: es, split: test, text: "Pues Marisol Hernández Báez, a sus órdenes.", expected: "Marisol Hernández Báez"}
+- {kind: name, lang: es, split: test, text: "Habla Yolanda Cordero Ríos.", expected: "Yolanda Cordero Ríos"}
+- {kind: name, lang: es, split: test, text: "Mire, el paciente es Wilfredo Núñez.", expected: "Wilfredo Núñez"}
+- {kind: name, lang: es, split: test, text: "Buenas, Xiomara Beatriz Cáceres.", expected: "Xiomara Beatriz Cáceres"}
+- {kind: name, lang: en, split: test, text: "Yeah, hi, it's Christopher Allen Baker.", expected: "Christopher Allen Baker"}
+- {kind: name, lang: en, split: test, text: "Uh, Maria Gonzalez-Reyes.", expected: "Maria Gonzalez-Reyes"}
+- {kind: name, lang: en, split: test, text: "So my name is Timothy Brooks.", expected: "Timothy Brooks"}
+- {kind: name, lang: en, split: test, text: "Um, Ashley Nicole Washington.", expected: "Ashley Nicole Washington"}
+- {kind: name, lang: en, split: test, text: "It's, uh, Kevin Patel.", expected: "Kevin Patel"}
+- {kind: name, lang: en, split: test, text: "Good morning, this is Linda Marie Kowalski.", expected: "Linda Marie Kowalski"}
+# dob
+- {kind: dob, lang: es, split: test, text: "El veinte de octubre de mil novecientos setenta y siete.", expected: "1977-10-20"}
+- {kind: dob, lang: es, split: test, text: "Pues nací el 5 de mayo del 85.", expected: "1985-05-05"}
+- {kind: dob, lang: es, split: test, text: "Este... 18/06/1962.", expected: "1962-06-18"}
+- {kind: dob, lang: es, split: test, text: "Mire, el trece de enero de dos mil diez.", expected: "2010-01-13"}
+- {kind: dob, lang: es, split: test, text: "Ay, el 2 de noviembre de 1999.", expected: "1999-11-02"}
+- {kind: dob, lang: es, split: test, text: "Veintisiete de marzo de mil novecientos cincuenta y cuatro.", expected: "1954-03-27"}
+- {kind: dob, lang: es, split: test, text: "O sea, el 11 de septiembre del 2001.", expected: "2001-09-11"}
+- {kind: dob, lang: es, split: test, text: "El diecisiete de julio del sesenta y nueve.", expected: "1969-07-17"}
+- {kind: dob, lang: es, split: test, text: "Es 25 de diciembre de 1983.", expected: "1983-12-25"}
+- {kind: dob, lang: es, split: test, text: "Nací el cuatro de agosto de mil novecientos noventa y seis.", expected: "1996-08-04"}
+- {kind: dob, lang: en, split: test, text: "Uh, June 9th, 1971.", expected: "1971-06-09"}
+- {kind: dob, lang: en, split: test, text: "It's 11/30/1994.", expected: "1994-11-30"}
+- {kind: dob, lang: en, split: test, text: "So, um, February second, nineteen eighty-three.", expected: "1983-02-02"}
+- {kind: dob, lang: en, split: test, text: "The 19th of September, two thousand eight.", expected: "2008-09-19"}
+- {kind: dob, lang: en, split: test, text: "Yeah, January fourteenth, sixty-one.", expected: "1961-01-14"}
+- {kind: dob, lang: en, split: test, text: "I was born August 23rd, 1990.", expected: "1990-08-23"}
+# visit
+- {kind: visit, lang: es, split: test, text: "Nomás un chequeo anual.", expected: "general"}
+- {kind: visit, lang: es, split: test, text: "Pues quiero un examen médico completo para el seguro.", expected: "general"}
+- {kind: visit, lang: es, split: test, text: "Hace años que no me hago una revisión, quiero ir.", expected: "general"}
+- {kind: visit, lang: es, split: test, text: "Es para una consulta normal, o sea de rutina.", expected: "general"}
+- {kind: visit, lang: es, split: test, text: "Voy a volver porque el doctor quería ver cómo sigo.", expected: "follow-up"}
+- {kind: visit, lang: es, split: test, text: "Para que me expliquen los resultados de la radiografía.", expected: "follow-up"}
+- {kind: visit, lang: es, split: test, text: "Es una revisión de control después de mi operación.", expected: "follow-up"}
+- {kind: visit, lang: es, split: test, text: "Necesito la vacuna del tétanos, me corté con un fierro oxidado.", expected: "vaccine"}
+- {kind: visit, lang: es, split: test, text: "Ay, es para ponerme el shot de la gripe.", expected: "vaccine"}
+- {kind: visit, lang: es, split: test, text: "Mi bebé tiene que vacunarse, ya cumplió seis meses.", expected: "vaccine"}
+- {kind: visit, lang: en, split: test, text: "Um, just a routine physical.", expected: "general"}
+- {kind: visit, lang: en, split: test, text: "I want to get a general check-up done.", expected: "general"}
+- {kind: visit, lang: en, split: test, text: "Yeah, my yearly wellness visit.", expected: "general"}
+- {kind: visit, lang: en, split: test, text: "The doctor wanted me to come back after my blood work.", expected: "follow-up"}
+- {kind: visit, lang: en, split: test, text: "Uh, I need a tetanus shot.", expected: "vaccine"}
+- {kind: visit, lang: en, split: test, text: "So it's for the shingles vaccine.", expected: "vaccine"}
+# choice
+- {kind: choice, lang: es, split: test, text: "Sí, la primera está bien.", expected: 0}
+- {kind: choice, lang: es, split: test, text: "La segunda, gracias.", expected: 1}
+- {kind: choice, lang: es, split: test, text: "Pues mejor la tercera.", expected: 2}
+- {kind: choice, lang: es, split: test, text: "Eh, la de en medio.", expected: 1}
+- {kind: choice, lang: es, split: test, text: "La última que me dijo.", expected: 2}
+- {kind: choice, lang: es, split: test, text: "Este... déjeme pensarlo tantito.", expected: null}
+- {kind: choice, lang: es, split: test, text: "Dos. La dos.", expected: 1}
+- {kind: choice, lang: es, split: test, text: "Mire, la primera, esa me sirve.", expected: 0}
+- {kind: choice, lang: es, split: test, text: "Ahorita no sé, tengo que ver si me dan permiso en el trabajo.", expected: null}
+- {kind: choice, lang: es, split: test, text: "Esa, la tercera opción, la del jueves.", expected: 2}
+- {kind: choice, lang: en, split: test, text: "Uh, the first option.", expected: 0}
+- {kind: choice, lang: en, split: test, text: "Number two, please.", expected: 1}
+- {kind: choice, lang: en, split: test, text: "The third one is good.", expected: 2}
+- {kind: choice, lang: en, split: test, text: "Wait a second, let me grab a pen.", expected: null}
+- {kind: choice, lang: en, split: test, text: "The one in the middle.", expected: 1}
+- {kind: choice, lang: en, split: test, text: "Hmm, I'm not sure yet, none of those really.", expected: null}
+# yes_no
+- {kind: yes_no, lang: es, split: test, text: "Sí, está bien.", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Correcto, sí, agéndela.", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Sí señorita, perfecto.", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "No, ese no es el día.", expected: "no"}
+- {kind: yes_no, lang: es, split: test, text: "Pues no, no la quiero.", expected: "no"}
+- {kind: yes_no, lang: es, split: test, text: "No no, equivocado.", expected: "no"}
+- {kind: yes_no, lang: es, split: test, text: "Sí, pero ¿no tiene más temprano?", expected: "unclear"}
+- {kind: yes_no, lang: es, split: test, text: "Eh, pues yo creo que sí.", expected: "unclear"}
+- {kind: yes_no, lang: es, split: test, text: "A ver, ¿puede repetir la hora?", expected: "unclear"}
+- {kind: yes_no, lang: es, split: test, text: "Mmm, no sé, tal vez.", expected: "unclear"}
+- {kind: yes_no, lang: en, split: test, text: "Yes, correct.", expected: "yes"}
+- {kind: yes_no, lang: en, split: test, text: "Yep, that's good.", expected: "yes"}
+- {kind: yes_no, lang: en, split: test, text: "No, that's not right.", expected: "no"}
+- {kind: yes_no, lang: en, split: test, text: "Uh, no thanks.", expected: "no"}
+- {kind: yes_no, lang: en, split: test, text: "Maybe, I guess.", expected: "unclear"}
+- {kind: yes_no, lang: en, split: test, text: "Yeah, but only if it's before noon.", expected: "unclear"}
+# persona
+- {kind: persona, lang: es, split: test, text: "Mejor quiero hablar con alguien, una persona de verdad.", expected: true}
+- {kind: persona, lang: es, split: test, text: "Comuníqueme con un agente, por favor.", expected: true}
+- {kind: persona, lang: es, split: test, text: "No quiero hablar con una máquina, pásame a un humano.", expected: true}
+- {kind: persona, lang: es, split: test, text: "¿Puedo hablar con la enfermera?", expected: true}
+- {kind: persona, lang: es, split: test, text: "Necesito una persona que me ayude.", expected: true}
+- {kind: persona, lang: es, split: test, text: "Mi doctora es la doctora Flores.", expected: false}
+- {kind: persona, lang: es, split: test, text: "La cita es para mi hija de cinco años.", expected: false}
+- {kind: persona, lang: es, split: test, text: "Mi esposa me dio este número.", expected: false}
+- {kind: persona, lang: es, split: test, text: "Pues la última vez me atendió un enfermero muy amable.", expected: false}
+- {kind: persona, lang: es, split: test, text: "Es que mi jefe no me deja salir temprano.", expected: false}
+- {kind: persona, lang: en, split: test, text: "I want to talk to a person, not a robot.", expected: true}
+- {kind: persona, lang: en, split: test, text: "Operator, please.", expected: true}
+- {kind: persona, lang: en, split: test, text: "Can I speak with someone at the front desk?", expected: true}
+- {kind: persona, lang: en, split: test, text: "I usually see Dr. Patel.", expected: false}
+- {kind: persona, lang: en, split: test, text: "My wife is going to drive me there.", expected: false}
+- {kind: persona, lang: en, split: test, text: "The nurse told me to call back.", expected: false}
+# language
+- {kind: language, lang: es, split: test, text: "Español.", expected: es}
+- {kind: language, lang: es, split: test, text: "Este, en español, por favor.", expected: es}
+- {kind: language, lang: es, split: test, text: "Pues, buenos días, necesito sacar una cita para mi mamá.", expected: es}
+- {kind: language, lang: es, split: test, text: "Sí, español, gracias.", expected: es}
+- {kind: language, lang: es, split: test, text: "Prefiero hablar en español, si no hay problema.", expected: es}
+- {kind: language, lang: es, split: test, text: "Mire, ¿me puede atender en español?", expected: es}
+- {kind: language, lang: en, split: test, text: "English.", expected: en}
+- {kind: language, lang: en, split: test, text: "Uh, English is fine.", expected: en}
+- {kind: language, lang: en, split: test, text: "Yeah, in English please.", expected: en}
+- {kind: language, lang: en, split: test, text: "Hello, I need to schedule an appointment.", expected: en}
+- {kind: language, lang: en, split: test, text: "I prefer English, thank you.", expected: en}
+- {kind: language, lang: en, split: test, text: "Um, English, yes.", expected: en}

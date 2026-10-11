@@ -1,0 +1,3 @@
+name: persona
+caller: ["Hola, quiero una cita", "Quiero hablar con una persona"]
+expect: {state: transferred, transfer_reason: caller_request}

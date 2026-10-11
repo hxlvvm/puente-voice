@@ -1,0 +1,4 @@
+name: slot-taken
+caller: ["Hola, quiero una cita", "Me llamo María Pérez", "15 de marzo de 1980", "sí", "consulta general", "la primera", "sí", "la primera", "sí"]
+take_slot: {before_turn: 6, slot: s1}
+expect: {state: done, booked_slot: s2, says_contains: ["acaba de ocuparse"]}

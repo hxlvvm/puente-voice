@@ -1,0 +1,3 @@
+name: ambiguous-match
+caller: ["Hola", "Me llamo Ana López", "1 de enero de 1990", "sí"]
+expect: {state: transferred, transfer_reason: ambiguous_match}

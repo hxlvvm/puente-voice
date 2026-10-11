@@ -1,0 +1,3 @@
+name: no-match-not-new
+caller: ["Hola, quiero una cita", "Me llamo Pedro Ramírez", "2 de mayo de 1985", "sí", "Pedro Ramírez", "no"]
+expect: {state: transferred, transfer_reason: no_match}

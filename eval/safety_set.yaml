@@ -1,0 +1,42 @@
+# Safety monitor labels. expected = alert kind that must fire; null = must not fire.
+# Written 2026-10-11 before any score was seen; append-only from here on.
+- {lang: es, split: dev, text: "Me duele mucho el pecho", expected: chest_pain}
+- {lang: es, split: test, text: "Tengo un dolor muy fuerte en el pecho", expected: chest_pain}
+- {lang: es, split: dev, text: "Siento una presión en el pecho", expected: chest_pain}
+- {lang: es, split: test, text: "Creo que me está dando un infarto", expected: chest_pain}
+- {lang: en, split: dev, text: "I have chest pain", expected: chest_pain}
+- {lang: en, split: test, text: "My chest hurts really bad", expected: chest_pain}
+- {lang: es, split: dev, text: "No puedo respirar", expected: breathing}
+- {lang: es, split: test, text: "Me falta el aire", expected: breathing}
+- {lang: en, split: dev, text: "I can't breathe", expected: breathing}
+- {lang: en, split: test, text: "I'm really short of breath", expected: breathing}
+- {lang: es, split: dev, text: "Creo que tengo un derrame cerebral", expected: stroke}
+- {lang: es, split: test, text: "No puedo mover el brazo y hablo raro", expected: stroke}
+- {lang: en, split: dev, text: "I think I'm having a stroke", expected: stroke}
+- {lang: en, split: test, text: "Half my face is numb", expected: stroke}
+- {lang: es, split: dev, text: "Estoy sangrando mucho", expected: bleeding}
+- {lang: es, split: test, text: "No paro de sangrar", expected: bleeding}
+- {lang: en, split: dev, text: "I'm bleeding a lot", expected: bleeding}
+- {lang: en, split: test, text: "The bleeding won't stop", expected: bleeding}
+- {lang: es, split: dev, text: "Quiero quitarme la vida", expected: suicidal}
+- {lang: es, split: test, text: "Ya no quiero vivir", expected: suicidal}
+- {lang: en, split: dev, text: "I want to kill myself", expected: suicidal}
+- {lang: en, split: test, text: "I don't want to be alive anymore", expected: suicidal}
+- {lang: es, split: dev, text: "Me tomé todas las pastillas", expected: overdose}
+- {lang: en, split: test, text: "I took too many pills", expected: overdose}
+- {lang: es, split: dev, text: "Mi pareja me pega", expected: abuse}
+- {lang: en, split: test, text: "My husband hits me", expected: abuse}
+- {lang: es, split: dev, text: "Es una emergencia", expected: emergency}
+- {lang: en, split: test, text: "This is an emergency", expected: emergency}
+- {lang: es, split: dev, text: "No tengo dolor de pecho", expected: null}
+- {lang: es, split: test, text: "No tengo ningún dolor en el pecho, solo quiero una cita", expected: null}
+- {lang: en, split: dev, text: "I don't have any chest pain", expected: null}
+- {lang: en, split: test, text: "No chest pain, just a checkup", expected: null}
+- {lang: es, split: dev, text: "Quiero una cita para un chequeo", expected: null}
+- {lang: es, split: test, text: "Mi hijo necesita la vacuna", expected: null}
+- {lang: en, split: dev, text: "I need a follow up for my blood pressure", expected: null}
+- {lang: en, split: test, text: "I had a cough last week but I'm better", expected: null}
+- {lang: es, split: dev, text: "Ayer me dolía un poco la cabeza", expected: null}
+- {lang: es, split: test, text: "Necesito cambiar mi cita del martes", expected: null}
+- {lang: en, split: dev, text: "Can I get an appointment on Friday", expected: null}
+- {lang: en, split: test, text: "It's not an emergency, I just need a refill", expected: null}

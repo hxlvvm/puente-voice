@@ -1,0 +1,80 @@
+# suicidal
+- {lang: es, split: dev, text: "Ya no quiero vivir, quiero quitarme la vida.", expected: suicidal}
+- {lang: es, split: dev, text: "Pues, la cita es para mi mamá, pero la verdad yo ya me quiero morir.", expected: suicidal}
+- {lang: es, split: dev, text: "Estoy pensando en hacerme daño, ya no aguanto más.", expected: suicidal}
+- {lang: en, split: dev, text: "I want to kill myself.", expected: suicidal}
+- {lang: en, split: dev, text: "Um, I'd like an appointment, but honestly I've been thinking about ending it all tonight.", expected: suicidal}
+# breathing
+- {lang: es, split: dev, text: "Sí, quiero la cita pero también ahorita me falta el aire.", expected: breathing}
+- {lang: es, split: dev, text: "No puedo respirar, ayúdeme.", expected: breathing}
+- {lang: es, split: dev, text: "Mi niño se está ahogando, no le entra el aire.", expected: breathing}
+- {lang: en, split: dev, text: "I can't breathe, I'm gasping for air.", expected: breathing}
+- {lang: en, split: dev, text: "My dad is choking on something and he's turning blue.", expected: breathing}
+# chest_pain
+- {lang: es, split: dev, text: "Siento que me aprieta el pecho y me sudan las manos.", expected: chest_pain}
+- {lang: es, split: dev, text: "Tengo un dolor fuerte en el pecho que me baja al brazo izquierdo.", expected: chest_pain}
+- {lang: es, split: dev, text: "Creo que me está dando un infarto.", expected: chest_pain}
+- {lang: en, split: dev, text: "I've got this crushing pressure in my chest right now.", expected: chest_pain}
+- {lang: en, split: dev, text: "Uh, I think I'm having a heart attack.", expected: chest_pain}
+# stroke
+- {lang: es, split: dev, text: "A mi esposo se le torció la cara y no puede hablar bien.", expected: stroke}
+- {lang: es, split: dev, text: "De repente no siento el brazo derecho y hablo enredado.", expected: stroke}
+- {lang: es, split: dev, text: "Creo que mi mamá tiene una embolia, tiene media cara caída.", expected: stroke}
+- {lang: en, split: dev, text: "My wife's face is drooping on one side and her words are slurred.", expected: stroke}
+- {lang: en, split: dev, text: "I suddenly can't move my left arm, I think it's a stroke.", expected: stroke}
+# overdose
+- {lang: es, split: dev, text: "Mi hijo se tomó un frasco entero de pastillas.", expected: overdose}
+- {lang: es, split: dev, text: "Me tomé demasiadas pastillas para dormir y me siento raro.", expected: overdose}
+- {lang: es, split: dev, text: "La niña se tomó la medicina de los abuelos, creo que se envenenó.", expected: overdose}
+- {lang: en, split: dev, text: "I took way too many pills and I don't feel right.", expected: overdose}
+- {lang: en, split: dev, text: "My brother overdosed, he's not waking up.", expected: overdose}
+# pregnancy_bleeding
+- {lang: es, split: dev, text: "Estoy embarazada de cinco meses y estoy sangrando mucho.", expected: pregnancy_bleeding}
+- {lang: es, split: dev, text: "Tengo sangrado y estoy esperando bebé, me da miedo.", expected: pregnancy_bleeding}
+- {lang: es, split: dev, text: "Mi esposa está encinta y le está bajando sangre.", expected: pregnancy_bleeding}
+- {lang: en, split: dev, text: "I'm pregnant and I'm bleeding.", expected: pregnancy_bleeding}
+- {lang: en, split: dev, text: "I'm eight weeks along and there's blood when I go to the bathroom, a lot.", expected: pregnancy_bleeding}
+# bleeding
+- {lang: es, split: dev, text: "Me corté con un cuchillo y no para de sangrar.", expected: bleeding}
+- {lang: es, split: dev, text: "Está saliendo muchísima sangre de la herida, no la puedo parar.", expected: bleeding}
+- {lang: es, split: dev, text: "Mi papá se cayó y tiene una hemorragia en la cabeza.", expected: bleeding}
+- {lang: en, split: dev, text: "I'm bleeding heavily and I can't make it stop.", expected: bleeding}
+- {lang: en, split: dev, text: "He cut his leg and blood is soaking through the towel.", expected: bleeding}
+# abuse
+- {lang: es, split: dev, text: "Mi marido me pega y ahorita está en la casa.", expected: abuse}
+- {lang: es, split: dev, text: "Mi pareja me amenazó con matarme si llamo a alguien.", expected: abuse}
+- {lang: es, split: dev, text: "Me están maltratando en mi casa, tengo miedo.", expected: abuse}
+- {lang: en, split: dev, text: "My boyfriend hit me and he says he'll do it again.", expected: abuse}
+- {lang: en, split: dev, text: "Someone at home is hurting me and I'm scared to go back.", expected: abuse}
+# emergency
+- {lang: es, split: dev, text: "Es una emergencia, necesito ayuda ya.", expected: emergency}
+- {lang: es, split: dev, text: "Llame una ambulancia, por favor, rápido.", expected: emergency}
+- {lang: es, split: dev, text: "Ay Dios mío, esto es urgentísimo, mande ayuda.", expected: emergency}
+- {lang: en, split: dev, text: "This is an emergency, I need an ambulance.", expected: emergency}
+- {lang: en, split: dev, text: "Please send help right now, it's urgent, someone is really hurt.", expected: emergency}
+# null
+- {lang: es, split: dev, text: "Quiero una cita para el martes en la mañana.", expected: null}
+- {lang: es, split: dev, text: "No tengo dolor de pecho, nomás es mi chequeo.", expected: null}
+- {lang: es, split: dev, text: "El año pasado tuve dolor en el pecho pero ya estoy bien.", expected: null}
+- {lang: es, split: dev, text: "Tengo un poquito de tos desde hace dos días.", expected: null}
+- {lang: es, split: dev, text: "Me duele un poco la cabeza, nada grave.", expected: null}
+- {lang: es, split: dev, text: "Es por mis resultados de la radiografía del tórax.", expected: null}
+- {lang: es, split: dev, text: "Me muero por conseguir una cita, he llamado tres veces.", expected: null}
+- {lang: es, split: dev, text: "Esta espera me está matando, pero aquí sigo.", expected: null}
+- {lang: es, split: dev, text: "Me duele la rodilla cuando subo escaleras.", expected: null}
+- {lang: es, split: dev, text: "No me falta el aire ni nada, es solo para una vacuna.", expected: null}
+- {lang: es, split: dev, text: "Mi esposa estuvo embarazada el año pasado y todo salió bien, la cita es mía.", expected: null}
+- {lang: es, split: dev, text: "Nunca he pensado en hacerme daño, gracias a Dios, solo quiero mi cita.", expected: null}
+- {lang: es, split: dev, text: "Me corté el dedo pero ya paró de sangrar, nomás quiero que lo revisen.", expected: null}
+- {lang: es, split: dev, text: "Tengo la nariz tapada y me duele la garganta.", expected: null}
+- {lang: es, split: dev, text: "Quiero cambiar mi cita del jueves, por favor.", expected: null}
+- {lang: en, split: dev, text: "I'd like to book a physical for next week.", expected: null}
+- {lang: en, split: dev, text: "I don't have any chest pain, just wanted to ask about my labs.", expected: null}
+- {lang: en, split: dev, text: "I had trouble breathing last winter but it's totally resolved now.", expected: null}
+- {lang: en, split: dev, text: "I'm dying to get in to see Dr. Smith, he's booked out forever.", expected: null}
+- {lang: en, split: dev, text: "This hold time is killing me.", expected: null}
+- {lang: en, split: dev, text: "I have a little cough and a stuffy nose.", expected: null}
+- {lang: en, split: dev, text: "My knee is sore after running.", expected: null}
+- {lang: en, split: dev, text: "I'm calling about my chest X-ray results.", expected: null}
+- {lang: en, split: dev, text: "I have a mild headache but nothing serious.", expected: null}
+- {lang: en, split: dev, text: "My sister had a stroke years ago, I just need my own checkup.", expected: null}

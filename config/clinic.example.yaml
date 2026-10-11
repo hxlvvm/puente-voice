@@ -1,0 +1,21 @@
+clinic_id: demo-clinic
+name: Clínica Demo
+timezone: America/Chicago
+max_slots_offered: 3
+search_days: 14
+visit_types:
+  - code: general
+    es: consulta general
+    en: general visit
+    synonyms_es: [general, chequeo, examen fisico, rutina, revise, revision]
+    synonyms_en: [general, checkup, check-up, regular visit, physical, routine]
+  - code: follow-up
+    es: cita de seguimiento
+    en: follow-up visit
+    synonyms_es: [seguimiento, control, resultados]
+    synonyms_en: [follow up, follow-up, followup, results]
+  - code: vaccine
+    es: vacuna
+    en: vaccination
+    synonyms_es: [vacuna, vacunacion, inyeccion]
+    synonyms_en: [vaccine, vaccination, shot, flu shot, booster]

@@ -1,0 +1,6 @@
+# A cough during the slot list must not cut the list off or cost the caller a turn.
+# Confirmations are two words so the one-word "sí" recognition limit (README Status) does not mask the measurement.
+name: cough-during-offer
+caller: ["Hola, quiero una cita", "Me llamo María Pérez", "15 de marzo de 1980", "sí, correcto", "consulta general", "la primera", "sí, correcto"]
+cough_in_reply: 4
+expect: {state: done, booked_slot: s1}

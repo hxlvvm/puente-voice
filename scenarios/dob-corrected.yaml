@@ -1,0 +1,3 @@
+name: dob-corrected
+caller: ["Hola, quiero una cita", "Me llamo María Pérez", "15 de marzo de 1981", "no", "15 de marzo de 1980", "sí", "vacuna", "la primera", "sí"]
+expect: {state: done, booked_slot: s5}

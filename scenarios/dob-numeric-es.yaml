@@ -1,0 +1,3 @@
+name: dob-numeric-es
+caller: ["Hola, quiero una cita", "Me llamo María Pérez", "15/03/1980", "sí", "consulta general", "la primera", "sí"]
+expect: {state: done, booked_slot: s1}

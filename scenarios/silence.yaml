@@ -1,0 +1,3 @@
+name: silence
+caller: ["Hola, quiero una cita", "", ""]
+expect: {state: transferred, transfer_reason: not_understood}

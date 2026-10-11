@@ -1,0 +1,82 @@
+# Caller turns per flow state. expected = what the caller meant; null = nothing of this kind should be read.
+# Written 2026-10-11 before any score was seen; append-only from here on.
+- {kind: name, lang: es, split: dev, text: "Me llamo María Pérez", expected: "María Pérez"}
+- {kind: name, lang: es, split: test, text: "Soy Juan Carlos Gómez", expected: "Juan Carlos Gómez"}
+- {kind: name, lang: es, split: dev, text: "María Pérez", expected: "María Pérez"}
+- {kind: name, lang: es, split: test, text: "Mi nombre es Ana Lucía Torres", expected: "Ana Lucía Torres"}
+- {kind: name, lang: es, split: dev, text: "Habla Pedro Ramírez", expected: "Pedro Ramírez"}
+- {kind: name, lang: es, split: test, text: "Este... me llamo José Luis Martínez", expected: "José Luis Martínez"}
+- {kind: name, lang: es, split: dev, text: "Sí, claro, Rosa Elena Díaz", expected: "Rosa Elena Díaz"}
+- {kind: name, lang: es, split: test, text: "Buenas tardes, mi nombre completo es Carmen Ruiz López", expected: "Carmen Ruiz López"}
+- {kind: name, lang: en, split: dev, text: "My name is John Smith", expected: "John Smith"}
+- {kind: name, lang: en, split: test, text: "This is Sarah Johnson", expected: "Sarah Johnson"}
+- {kind: name, lang: en, split: dev, text: "Yeah, it's Michael Brown", expected: "Michael Brown"}
+- {kind: name, lang: en, split: test, text: "Uh, my name is Emily Davis", expected: "Emily Davis"}
+- {kind: dob, lang: es, split: dev, text: "15 de marzo de 1980", expected: "1980-03-15"}
+- {kind: dob, lang: es, split: test, text: "El 15 de marzo de 1980", expected: "1980-03-15"}
+- {kind: dob, lang: es, split: dev, text: "Nací el 2 de mayo de 1985", expected: "1985-05-02"}
+- {kind: dob, lang: es, split: test, text: "Quince de marzo de mil novecientos ochenta", expected: "1980-03-15"}
+- {kind: dob, lang: es, split: dev, text: "15/03/1980", expected: "1980-03-15"}
+- {kind: dob, lang: es, split: test, text: "El primero de enero de 1990", expected: "1990-01-01"}
+- {kind: dob, lang: es, split: dev, text: "1 de enero del 90", expected: "1990-01-01"}
+- {kind: dob, lang: es, split: test, text: "Veinte de julio de 1975", expected: "1975-07-20"}
+- {kind: dob, lang: en, split: dev, text: "March 15th, 1980", expected: "1980-03-15"}
+- {kind: dob, lang: en, split: test, text: "July 4, 1975", expected: "1975-07-04"}
+- {kind: dob, lang: en, split: dev, text: "The 4th of July, 1975", expected: "1975-07-04"}
+- {kind: dob, lang: en, split: test, text: "May second, nineteen eighty five", expected: "1985-05-02"}
+- {kind: visit, lang: es, split: dev, text: "Consulta general", expected: general}
+- {kind: visit, lang: es, split: test, text: "Un chequeo, por favor", expected: general}
+- {kind: visit, lang: es, split: dev, text: "Quiero un control", expected: follow-up}
+- {kind: visit, lang: es, split: test, text: "Para la vacuna de la gripe", expected: vaccine}
+- {kind: visit, lang: es, split: dev, text: "Seguimiento de mis resultados", expected: follow-up}
+- {kind: visit, lang: es, split: test, text: "Una consulta de seguimiento", expected: follow-up}
+- {kind: visit, lang: en, split: dev, text: "A checkup", expected: general}
+- {kind: visit, lang: en, split: test, text: "A follow up visit", expected: follow-up}
+- {kind: visit, lang: en, split: dev, text: "A flu shot", expected: vaccine}
+- {kind: visit, lang: en, split: test, text: "I need to go over my results", expected: follow-up}
+- {kind: choice, lang: es, split: dev, text: "La primera", expected: 0}
+- {kind: choice, lang: es, split: test, text: "La segunda opción", expected: 1}
+- {kind: choice, lang: es, split: dev, text: "La tercera", expected: 2}
+- {kind: choice, lang: es, split: test, text: "Opción 2", expected: 1}
+- {kind: choice, lang: es, split: dev, text: "La última", expected: 2}
+- {kind: choice, lang: es, split: test, text: "La primera, por favor", expected: 0}
+- {kind: choice, lang: es, split: dev, text: "Un segundo", expected: null}
+- {kind: choice, lang: es, split: test, text: "Un momento, déjeme ver", expected: null}
+- {kind: choice, lang: en, split: dev, text: "The first one", expected: 0}
+- {kind: choice, lang: en, split: test, text: "The second", expected: 1}
+- {kind: choice, lang: en, split: dev, text: "Option three", expected: 2}
+- {kind: choice, lang: en, split: test, text: "The last one", expected: 2}
+- {kind: yes_no, lang: es, split: dev, text: "Sí", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Sí, correcto", expected: "yes"}
+- {kind: yes_no, lang: es, split: dev, text: "Claro", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Correcto", expected: "yes"}
+- {kind: yes_no, lang: es, split: dev, text: "Así es", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Vale", expected: "yes"}
+- {kind: yes_no, lang: es, split: dev, text: "Eso es", expected: "yes"}
+- {kind: yes_no, lang: es, split: test, text: "Exacto", expected: "yes"}
+- {kind: yes_no, lang: es, split: dev, text: "No", expected: "no"}
+- {kind: yes_no, lang: es, split: test, text: "No, está mal", expected: "no"}
+- {kind: yes_no, lang: es, split: dev, text: "No es correcto", expected: "no"}
+- {kind: yes_no, lang: es, split: test, text: "Creo que sí", expected: "unclear"}
+- {kind: yes_no, lang: es, split: dev, text: "No sé", expected: "unclear"}
+- {kind: yes_no, lang: es, split: test, text: "Sí, pero mejor el jueves", expected: "unclear"}
+- {kind: yes_no, lang: en, split: dev, text: "Yes", expected: "yes"}
+- {kind: yes_no, lang: en, split: test, text: "Yeah", expected: "yes"}
+- {kind: yes_no, lang: en, split: dev, text: "That's right", expected: "yes"}
+- {kind: yes_no, lang: en, split: test, text: "Correct", expected: "yes"}
+- {kind: yes_no, lang: en, split: dev, text: "Nope", expected: "no"}
+- {kind: yes_no, lang: en, split: test, text: "That's wrong", expected: "no"}
+- {kind: yes_no, lang: en, split: dev, text: "I think so", expected: "unclear"}
+- {kind: yes_no, lang: en, split: test, text: "Hmm, not sure", expected: "unclear"}
+- {kind: language, lang: es, split: dev, text: "Español, por favor", expected: es}
+- {kind: language, lang: es, split: test, text: "Hola, quiero una cita", expected: es}
+- {kind: language, lang: en, split: dev, text: "English, please", expected: en}
+- {kind: language, lang: en, split: test, text: "Hello, I need an appointment", expected: en}
+- {kind: language, lang: es, split: dev, text: "Buenos días, necesito sacar una cita", expected: es}
+- {kind: language, lang: en, split: test, text: "Hi, I'd like to schedule a visit", expected: en}
+- {kind: persona, lang: es, split: dev, text: "Quiero hablar con una persona", expected: true}
+- {kind: persona, lang: es, split: test, text: "¿Me puede comunicar con un agente?", expected: true}
+- {kind: persona, lang: en, split: dev, text: "I want to talk to a human", expected: true}
+- {kind: persona, lang: en, split: test, text: "Representative, please", expected: true}
+- {kind: persona, lang: es, split: dev, text: "Quiero una cita", expected: false}
+- {kind: persona, lang: en, split: test, text: "I need an appointment for my son", expected: false}
