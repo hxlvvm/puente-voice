@@ -30,5 +30,3 @@ jobs:
       - run: pytest -m fhir -q tests/test_fhir_integration.py   # the other modules need the audio extra
         env:
           PUENTE_FHIR_URL: http://localhost:8080/fhir
-        env:
-          PUENTE_FHIR_URL: http://localhost:8080/fhir
